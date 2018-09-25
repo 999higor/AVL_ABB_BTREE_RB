@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+#include "menu.h"
 #include "avl.h"
 
 int avl()

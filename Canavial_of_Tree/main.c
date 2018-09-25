@@ -10,6 +10,7 @@ int main()
     do{
         printf("1 - Arvore ABB \n");
         printf("2 - Arvore AVL \n");
+        printf("3 - Arvore B \n");
 
         scanf("%d",&option);
 
@@ -21,6 +22,10 @@ int main()
 
             case 2:
                 avl();
+                break;
+
+            case 3:
+                BTree();
                 break;
         }
     }while(option!=0);

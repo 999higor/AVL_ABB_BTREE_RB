@@ -250,8 +250,8 @@ void postOrder(struct Node *root ,FILE *arquivo)
 {
     if(root != NULL)
     {
-        posOrdem(root->left ,arquivo);
-        posOrdem(root->right ,arquivo);
+        postOrder(root->left ,arquivo);
+        postOrder(root->right ,arquivo);
         fprintf(arquivo,"%i\n", root->key);
     }
 }
