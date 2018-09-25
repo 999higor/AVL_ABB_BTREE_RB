@@ -93,3 +93,12 @@
 	"menu.h"
 	"avl.h"
 
+1537918750 source:c:\users\administrador\documents\github\canavial_of_tree\canavial_of_tree\btree.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	<string.h>
+	"BTree.h"
+
+1537917395 c:\users\administrador\documents\github\canavial_of_tree\canavial_of_tree\btree.h
+
