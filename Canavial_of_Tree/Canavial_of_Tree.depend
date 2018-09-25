@@ -1,0 +1,62 @@
+# depslib dependency file v1.0
+1537905362 source:d:\higor\documents\github\canavial_of_tree\canavial_of_tree\abb.c
+	<stdio.h>
+	<stdlib.h>
+	"abb.h"
+
+1533676976 d:\higor\documents\github\canavial_of_tree\canavial_of_tree\abb.h
+
+1537906589 source:d:\higor\documents\github\canavial_of_tree\canavial_of_tree\avl.c
+	<stdio.h>
+	<stdlib.h>
+	"avl.h"
+
+1534274237 d:\higor\documents\github\canavial_of_tree\canavial_of_tree\avl.h
+
+1537906685 source:d:\higor\documents\github\canavial_of_tree\canavial_of_tree\menu_abb.c
+	<stdlib.h>
+	<stdio.h>
+	"abb.h"
+
+1537906897 source:d:\higor\documents\github\canavial_of_tree\canavial_of_tree\menu_avl.c
+	<stdlib.h>
+	<stdio.h>
+	"avl.h"
+
+1537907784 source:d:\higor\documents\github\canavial_of_tree\canavial_of_tree\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1537906897 d:\higor\documents\github\canavial_of_tree\canavial_of_tree\menu_abb.c
+	<stdlib.h>
+	<stdio.h>
+	"abb.h"
+
+1537906897 d:\higor\documents\github\canavial_of_tree\canavial_of_tree\menu_avl.c
+	<stdlib.h>
+	<stdio.h>
+	"avl.h"
+
+1537907327 source:d:\higor\documents\github\canavial_of_tree\canavial_of_tree\menuabb.c
+	<stdlib.h>
+	<stdio.h>
+	"abb.h"
+
+1537907327 d:\higor\documents\github\canavial_of_tree\canavial_of_tree\menuabb.c
+	<stdlib.h>
+	<stdio.h>
+	"abb.h"
+
+1537907327 d:\higor\documents\github\canavial_of_tree\canavial_of_tree\menuavl.c
+	<stdlib.h>
+	<stdio.h>
+	"avl.h"
+
+1537907327 source:d:\higor\documents\github\canavial_of_tree\canavial_of_tree\menuavl.c
+	<stdlib.h>
+	<stdio.h>
+	"avl.h"
+
+1537907784 d:\higor\documents\github\canavial_of_tree\canavial_of_tree\menu.h
+
