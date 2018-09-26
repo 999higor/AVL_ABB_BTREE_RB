@@ -5,4 +5,6 @@ int abb();
 
 int avl();
 
+int BTree();
+
 #endif // MENU_H_INCLUDED

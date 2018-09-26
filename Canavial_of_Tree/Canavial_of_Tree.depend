@@ -60,3 +60,45 @@
 
 1537907784 d:\higor\documents\github\canavial_of_tree\canavial_of_tree\menu.h
 
+1537913355 source:c:\users\administrador\documents\github\canavial_of_tree\canavial_of_tree\abb.c
+	<stdio.h>
+	<stdlib.h>
+	"abb.h"
+
+1537913355 c:\users\administrador\documents\github\canavial_of_tree\canavial_of_tree\abb.h
+
+1537918240 source:c:\users\administrador\documents\github\canavial_of_tree\canavial_of_tree\avl.c
+	<stdio.h>
+	<stdlib.h>
+	"avl.h"
+
+1537913355 c:\users\administrador\documents\github\canavial_of_tree\canavial_of_tree\avl.h
+
+1537918174 source:c:\users\administrador\documents\github\canavial_of_tree\canavial_of_tree\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+
+1537918289 c:\users\administrador\documents\github\canavial_of_tree\canavial_of_tree\menu.h
+
+1537918344 source:c:\users\administrador\documents\github\canavial_of_tree\canavial_of_tree\menuabb.c
+	<stdlib.h>
+	<stdio.h>
+	"menu.h"
+	"abb.h"
+
+1537918344 source:c:\users\administrador\documents\github\canavial_of_tree\canavial_of_tree\menuavl.c
+	<stdlib.h>
+	<stdio.h>
+	"menu.h"
+	"avl.h"
+
+1537918750 source:c:\users\administrador\documents\github\canavial_of_tree\canavial_of_tree\btree.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	<string.h>
+	"BTree.h"
+
+1537917395 c:\users\administrador\documents\github\canavial_of_tree\canavial_of_tree\btree.h
+
