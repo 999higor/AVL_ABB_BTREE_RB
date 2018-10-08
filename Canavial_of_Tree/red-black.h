@@ -36,6 +36,8 @@ void color_delete(struct rbtNode *x);
 
 struct rbtNode* delete(int var);
 
+struct rbtNode* read_RB();
+
 
 
 #endif // RED-BLACK_H_INCLUDED

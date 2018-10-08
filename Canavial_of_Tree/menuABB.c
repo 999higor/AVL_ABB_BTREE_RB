@@ -16,11 +16,11 @@ int abb()
 
     do{
             printf(">>>>> ABB - Binary Search Tree <<<<<\n");
-            printf("1 - Insert\n");
-            printf("2 - Delete\n");
-            printf("3 - Search\n");
-            printf("4 - PERCURSO - IN Order\n");
-            printf("5 - PERCURSO - PRE Order\n");
+            printf("1 - INSERT\n");
+            printf("2 - DELETE\n");
+            printf("3 - SEARCH\n");
+            printf("4 - PRINT - IN Order\n");
+            printf("5 - PRINT - PRE Order\n");
             printf("6 - RECORD - POS Order\n");
             printf("7 - COUNT - All Elements\n");
             printf("8 - COUNT - All Leafs\n");
@@ -52,7 +52,13 @@ int abb()
                 printf("\nValue: ");
                 scanf("%d",&numero);
 
+                t_inicial = clock();
+
                 t = procura(t,numero);
+
+                t_final = clock();
+                tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
+                printf("\nTime Executation: %lf \n",tempo);
                 break;
 
                 case 4:

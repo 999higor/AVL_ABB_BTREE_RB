@@ -14,10 +14,11 @@ int red_black()
     {
         //printf("\nRed Black Tree Management - Enter your choice :1:Insert  2:Delete  3:Search  4:Traversal  5:Exit\n");
         printf(">>>>>> Red Black Tree <<<<<<\n");
-        printf("1 - Insert\n");
-        printf("2 - Delete\n");
-        printf("3 - Search\n");
-        printf("4 - Percuso - In Order\n");
+        printf("1 - INSERT\n");
+        printf("2 - DELETE\n");
+        printf("3 - SEARCH\n");
+        printf("4 - PRINT - In Order\n");
+        printf("5 - READ - VALUES.TXT\n");
         printf("0 - EXIT\n");
 
         printf(">");
@@ -52,6 +53,10 @@ int red_black()
                 break;
 
             case 0:
+                break;
+
+            case 5:
+                read_RB();
                 break;
 
             default:

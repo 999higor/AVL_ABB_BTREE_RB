@@ -501,3 +501,23 @@ struct rbtNode* delete(int var)
     }
     return y;
 }
+
+struct rbtNode* read_RB()
+{
+    int numero;
+
+    FILE* file = fopen ("values.txt", "r");
+
+    fscanf (file, "%d", &numero);
+
+    while (!feof(file))
+    {
+
+        insertRB(numero);
+
+        fscanf(file, "%d", &numero);
+
+    }
+    fclose(file);
+    //return b;
+}

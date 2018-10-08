@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <string.h>
+#include <time.h>
 
 #include "menu.h"
 #include "BTree.h"
@@ -13,14 +14,17 @@ int BTree()
 
     FILE *arquivo;
 
+    clock_t t_inicial, t_final;
+    float tempo=0;
+
     ///b = bTree_Create();
 
     do{
         printf(">>>>>>>>>>> B Tree <<<<<<<<<<<<<<<\n");
-        printf("1 - Insert\n");
-        printf("2 - Delete\n");///implementar
-        printf("3 - Search\n"); ///implementar
-        printf("4 - PERCURSO - IN Order\n");
+        printf("1 - INSERT\n");
+        printf("2 - DELETE\n"); ///FALTA IMPLEMENTAR
+        printf("3 - SEARCH\n"); ///AQ TAMBÉM
+        printf("4 - PRINT - IN Order\n");
         printf("5 - COUNT - All Elements\n");
         printf("6 - COUNT - All Leafs\n");
         printf("7 - VERIFY - The Height of the Tree\n");
@@ -81,7 +85,11 @@ int BTree()
 
         case 11:
             printf("Reading File . . . \n");
+            t_inicial = clock();
             Btree_Read_File(b);
+            t_final = clock();
+            tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
+            printf("Time Executation: %lf \n",tempo);
             break;
 
         case 22:
