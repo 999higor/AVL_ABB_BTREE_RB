@@ -13,12 +13,22 @@ struct node *novoNode(int item)
 
 struct node *procura(struct node *raiz ,int numero)
 {
-    if(raiz == NULL || raiz->numero == numero)
+    if(raiz == NULL)
+    {
+        //printf(">%d", raiz->numero);
         return raiz;
+    }
+    if(raiz->numero == numero)
+    {
+        printf("> Value Found: %d <", raiz->numero);
+        return raiz;
+    }
     if(raiz->numero < numero)
         return procura(raiz->direita, numero);
 
     return procura(raiz->esquerda, numero);
+
+
 };
 
 struct node *insere(struct node *node, int numero)

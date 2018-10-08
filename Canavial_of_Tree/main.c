@@ -8,9 +8,12 @@ int main()
     int option;
 
     do{
-        printf("1 - Arvore ABB \n");
-        printf("2 - Arvore AVL \n");
-        printf("3 - Arvore B \n");
+        printf("---> 1 -  ABB Tree \n");
+        printf("---> 2 -  AVL Tree \n");
+        printf("---> 3 -  B Tree \n");
+        printf("---> 4 -  RED-BLACK Tree \n");
+        printf("---> 0 - EXIT \n");
+        printf("> ");
 
         scanf("%d",&option);
 
@@ -26,6 +29,10 @@ int main()
 
             case 3:
                 BTree();
+                break;
+
+            case 4:
+                red_black();
                 break;
         }
     }while(option!=0);

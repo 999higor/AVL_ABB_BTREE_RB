@@ -13,47 +13,46 @@ int avl()
     FILE *arquivoGravadoAVL;
 
     do{
-            printf("--------------------------------------");
-            printf("\n1 - INSERCAO\n");
-            printf("2 - REMOCAO\n");
-            printf("3 - BUSCA\n");
-            printf("4 - PERCURSO EM ORDEM\n");
-            printf("5 - PERCURSO  EM PRE-ORDEM\n");
-            printf("6 - PERCURSO EM POS-ORDEM (GRAVACAO)\n");
-            printf("7 - VERIFICAR QUANTIDADE DE ELEMENTOS\n");
-            printf("8 - VERIFICAR QUANTIDADE DE FOLHAS\n");
-            printf("9 - VERIFICAR A ALTURA DA ARVORE\n");
-            printf("11 - VERIFICAR MAIOR ELEMENTO\n");
-            printf("12 - VERIFICAR MENOR ELEMENTO\n");
-            printf("13 - LER ARQUIVO\n");
-            printf("0 - SAIR\n");
-            printf("--------------------------------------\n");
-
+            printf(">>>>>> AVL - Balanced Binary Search Tree <<<<<\n");
+            printf("1 - Insert\n");
+            printf("2 - Delete\n");
+            printf("3 - Search\n");
+            printf("4 - PERCURSO - IN Order\n");
+            printf("5 - PERCURSO - PRE Order\n");
+            printf("6 - RECORD - POS Order\n");
+            printf("7 - COUNT - All Elements\n");
+            printf("8 - COUNT - All Leafs\n");
+            printf("9 - VERIFY - The Height of the Tree\n");
+            printf("11 - VERFIFY - The Higher Value\n");
+            printf("22 - VERIFY - The Lower Value\n");
+            printf("33 - READ - VALUES.TXT\n");
+            printf("0 - EXIT\n");
+            printf(">");
             scanf("%i",&op);
 
             switch(op)
             {
                 case 1:
-                printf("\ndigite o numero: ");
+                printf("\nValue: ");
                 scanf("%d",&numero);
                 root = insert(root, numero);
-                printf("valor inserido\n");
+
 
                 break;
 
                 case 2:
-                printf("\ndigite o numero: ");
+                printf("\nValue: ");
                 scanf("%d",&numero);
                 root = deleteNode(root ,numero);
-                printf("valor removido\n");
+
 
                 break;
 
                 case 3:
-                printf("\ndigite o numero: ");
+                printf("\nValue: ");
                 scanf("%d",&numero);
                 root = search(root, numero);
-                printf("valor encontrado\n");
+
 
                 break;
 
@@ -71,24 +70,23 @@ int avl()
                 arquivoGravadoAVL = fopen("arquivoGravadoAVL.txt" ,"w");
                 postOrder(root ,arquivoGravadoAVL);
 
-                printf("gravado com sucesso xd xd\n");
 
                 fclose(arquivoGravadoAVL);
                 break;
 
                 case 7:
                 vrau = countElement(root);
-                printf("\ntotal de elementos: %d\n",vrau);
+                printf("\nTotal of Elements: %d\n",vrau);
                 break;
 
                 case 8:
                 vrau = countLeaf(root);
-                printf("\ntotal de folhas: %d\n",vrau);
+                printf("\nTotal of Leafs: %d\n",vrau);
                 break;
 
                 case 9:
                 vrau = heightTree(root);
-                printf("\naltura da arvore: %d\n",vrau);
+                printf("\nTree Height: %d\n",vrau);
                 break;
 
                 case 10:
@@ -97,18 +95,24 @@ int avl()
 
                 case 11:
                 vrau = higherElement(root);
-                printf("\nmaior elemento: %d\n",vrau);
+                printf("\nHigher Element: %d\n",vrau);
                 break;
 
-                case 12:
+                case 22:
                 vrau = smallerElement(root);
-                printf("\nmenor elemento: %d\n",vrau);
+                printf("\nLower Element: %d\n",vrau);
                 break;
 
-                case 13:
+                case 33:
                 root = ler_arquivoAVL(root);
-                printf("\nArquivo lido com sucesso xd xd\n");
+                printf("\nFile Read\n");
                 break;
+
+                case 0:
+                    break;
+
+                default:
+                    printf("\nWrong way little grasshopper\n");
             }
 
     }while(op!=0);

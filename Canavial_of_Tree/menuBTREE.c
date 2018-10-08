@@ -16,18 +16,20 @@ int BTree()
     ///b = bTree_Create();
 
     do{
-        printf("\n1 - INSERIR\n");
-        printf("2 - REMOCAO\n");
-        printf("3 - CONTAR TOTOS OS ELEMENTOS DA ARVORE B\n");
-        printf("4 - CONTAR AS FOLHAS DA ARVORE B\n");
-        printf("5 - VERIFICAR A ALTURA DA ARVORE B\n");
-        printf("6 - VERIFICAR O MAIOR ELEMENTO DA ARVORE B\n");
-        printf("7 - VERIFICAR O MENOR ELEMENTO DA ARVORE B\n");
-        printf("8 - LER ARQUIVO VALUES.TXT\n");
-        printf("11 - IMPRIMIR A ARVORE B EM FORMA DE ARVORE\n");
-        printf("22 - IMPRIMIR A ARVORE B\n");
-        printf("33 - CRIA A ARVORE B <<<<<<<<<<<<< (CRIE A ARVORE PRIMEIRO) \n");
-        printf("0 - SAIR\n\n");
+        printf(">>>>>>>>>>> B Tree <<<<<<<<<<<<<<<\n");
+        printf("1 - Insert\n");
+        printf("2 - Delete\n");///implementar
+        printf("3 - Search\n"); ///implementar
+        printf("4 - PERCURSO - IN Order\n");
+        printf("5 - COUNT - All Elements\n");
+        printf("6 - COUNT - All Leafs\n");
+        printf("7 - VERIFY - The Height of the Tree\n");
+        printf("8 - VERFIFY - The Higher Value\n");
+        printf("9 - VERIFY - The Lower Value\n");
+        printf("11 - READ - VALUES.TXT\n");
+        printf("33 - CREATE - Create the B Tree First ! !\n");
+        printf("44 - DESTROY - Burn the Tree\n");
+        printf("0 - EXIT\n");
 
         scanf("%d",&option);
         printf("\n");
@@ -35,58 +37,76 @@ int BTree()
         switch(option)
         {
         case 1:
-            printf("Digite o valor a ser inserido: \n");
+            printf("\nValue: ");
             scanf("%d",&valor);
             bTree_Insert(b ,valor);
-            printf("\n\n");
             break;
 
         case 2:
-            printf("not working ); \n");
+            printf("Not Implemented ); \n");
             break;
 
         case 3:
-            printf("Total de Elementos na Arvore B : %d <\n",bTree_Count_All(b));
             break;
 
         case 4:
-            printf("Total de Folhas da Arvore B : %d <\n",bTree_Count_Leaf(b));
+            Btree_Print_Keys(b);
             break;
+
 
         case 5:
-            printf("Altura da Arvore B : %d <\n",bTree_Height(b));
+            printf("Total of Elements: %d <\n",bTree_Count_All(b));
             break;
+
 
         case 6:
-            printf("Maior Elemento da Arvore B : %d <\n",bTree_MAX(b));
+            printf("Total of Leafs: %d <\n",bTree_Count_Leaf(b));
             break;
+
 
         case 7:
-            printf("Menor Elemento da Arvore B : %d <\n",bTree_MIN(b));
+            printf("Tree Height: %d <\n",bTree_Height(b));
             break;
 
+
         case 8:
-            printf("Lendo Arquivo . . . \n");
+            printf("Higher Element: %d <\n",bTree_MAX(b));
+            break;
+
+
+        case 9:
+            printf("Lower Element: %d <\n",bTree_MIN(b));
+            break;
+
+
+        case 11:
+            printf("Reading File . . . \n");
             Btree_Read_File(b);
             break;
 
-        case 11:
-            bTree_Print_Keys_TreeMode(b);
-            break;
-
         case 22:
-            Btree_Print_Keys(b);
+            bTree_Print_Keys_TreeMode(b);
             break;
 
         case 33:
             b = bTree_Create();
             break;
 
+        case 44:
+            bTree_Destroy(b);
+            break;
+
+        case 0:
+            break;
+
+        default:
+            printf("Are you lost ? \n");
+
         }
 
 
     }while(option != 0);
 
-    //bTree_Destroy(b);
+
     return 0;
 }

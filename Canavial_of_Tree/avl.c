@@ -268,8 +268,13 @@ void inOrder(struct Node *root)
 
 struct Node *search(struct Node *root ,int key)
 {
-    if(root == NULL || root->key == key)
+    if(root == NULL)
         return root;
+    if(root->key == key)
+    {
+        printf("Value Found : %d <\n",root->key);
+        return root;
+    }
     if(root->key < key)
         return search(root->right, key);
 

@@ -7,4 +7,6 @@ int avl();
 
 int BTree();
 
+int red_black();
+
 #endif // MENU_H_INCLUDED

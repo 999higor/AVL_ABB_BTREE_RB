@@ -56,6 +56,13 @@
 		<Unit filename="menuBTREE.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="menuRB.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="red-black.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="red-black.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
