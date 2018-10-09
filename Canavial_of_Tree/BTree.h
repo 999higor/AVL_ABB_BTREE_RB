@@ -55,4 +55,6 @@ int bTree_Count_Leaf(bTree b);
 ///faz a leitura de um arquivo///
 bTree *Btree_Read_File(bTree b);
 
+void read_search_txt_B(bTree raiz);
+
 #endif // BTREE_H_INCLUDED

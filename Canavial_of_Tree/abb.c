@@ -16,12 +16,12 @@ struct node *procura(struct node *raiz ,int numero)
     if(raiz == NULL)
     {
         //printf(">%d", raiz->numero);
-        return raiz;
+        return 0;
     }
     if(raiz->numero == numero)
     {
         printf("> Value Found: %d <", raiz->numero);
-        return raiz;
+        return 1;
     }
     if(raiz->numero < numero)
         return procura(raiz->direita, numero);
@@ -191,4 +191,21 @@ struct node *ler_arquivo(struct node* raiz)
     }
     fclose(file);
     return raiz;
+}
+
+void read_search_txt(struct node* raiz)
+{
+    int number;
+
+    FILE* busca = fopen("search.txt", "r");
+
+    fscanf(busca, "%d", &number);
+
+    while(!feof(busca))
+    {
+        printf("  Return: %d \n",procura(raiz, number));
+        fscanf(busca, "%d", &number);
+
+    }
+    fclose(busca);
 }

@@ -82,6 +82,7 @@ int bTree_Search(bTree b, int key)
     {
         return(!b->isLeaf && bTree_Search(b->kids[pos], key));
     }
+
 }
 
 ///insere na arvore
@@ -313,4 +314,21 @@ bTree *Btree_Read_File(bTree b)
     }
     fclose(file);
     //return b;
+}
+
+void read_search_txt_B(bTree raiz)
+{
+    int number;
+
+    FILE* busca = fopen("search.txt", "r");
+
+    fscanf(busca, "%d", &number);
+
+    while(!feof(busca))
+    {
+        printf("  Return: %d \n",bTree_Search(raiz, number));
+        fscanf(busca, "%d", &number);
+
+    }
+    fclose(busca);
 }

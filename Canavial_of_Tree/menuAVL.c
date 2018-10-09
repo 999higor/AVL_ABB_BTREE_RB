@@ -14,7 +14,7 @@ int avl()
     FILE *arquivoGravadoAVL;
 
     clock_t t_inicial, t_final;
-    float tempo=0;
+    double tempo=0;
 
     do{
             printf(">>>>>> AVL - Balanced Binary Search Tree <<<<<\n");
@@ -30,6 +30,7 @@ int avl()
             printf("11 - VERFIFY - The Higher Value\n");
             printf("22 - VERIFY - The Lower Value\n");
             printf("33 - READ - VALUES.TXT\n");
+            printf("44 - READ - SEARCH.TXT\n");
             printf("0 - EXIT\n");
             printf(">");
             scanf("%i",&op);
@@ -47,7 +48,15 @@ int avl()
                 case 2:
                 printf("\nValue: ");
                 scanf("%d",&numero);
+
+                t_inicial = clock();
+
                 root = deleteNode(root ,numero);
+
+                t_final = clock();
+                tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
+                printf("Time Executation: %lf \n",tempo);
+
 
 
                 break;
@@ -58,14 +67,11 @@ int avl()
 
                 t_inicial = clock();
 
-                root = search(root, numero);
+                printf("\nReturn: %d",search(root, numero));
 
                 t_final = clock();
                 tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
                 printf("Time Executation: %lf \n",tempo);
-
-
-
                 break;
 
                 case 4:
@@ -116,6 +122,7 @@ int avl()
                 break;
 
                 case 33:
+
                 t_inicial = clock();
 
                 root = ler_arquivoAVL(root);
@@ -124,7 +131,12 @@ int avl()
                 tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
                 printf("\nFile Read\n");
                 printf("Time Executation: %lf \n",tempo);
+
                 break;
+
+                case 44:
+                    read_search_txt_AVL(root);
+                    break;
 
                 case 0:
                     break;

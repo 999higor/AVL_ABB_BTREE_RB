@@ -15,9 +15,9 @@ int BTree()
     FILE *arquivo;
 
     clock_t t_inicial, t_final;
-    float tempo=0;
+    double tempo=0;
 
-    ///b = bTree_Create();
+    b = bTree_Create();
 
     do{
         printf(">>>>>>>>>>> B Tree <<<<<<<<<<<<<<<\n");
@@ -30,9 +30,10 @@ int BTree()
         printf("7 - VERIFY - The Height of the Tree\n");
         printf("8 - VERFIFY - The Higher Value\n");
         printf("9 - VERIFY - The Lower Value\n");
-        printf("11 - READ - VALUES.TXT\n");
-        printf("33 - CREATE - Create the B Tree First ! !\n");
-        printf("44 - DESTROY - Burn the Tree\n");
+        printf("33 - READ - VALUES.TXT\n");
+        printf("44 - READ - SEARCH.TXT\n");
+       // printf("33 - CREATE - Create the B Tree First ! !\n");
+        //printf("44 - DESTROY - Burn the Tree\n");
         printf("0 - EXIT\n");
 
         scanf("%d",&option);
@@ -51,6 +52,17 @@ int BTree()
             break;
 
         case 3:
+            printf("\nValue: ");
+            scanf("%d",&valor);
+             t_inicial = clock();
+
+            printf("\nReturn %d" ,bTree_Search(b, valor));
+
+            t_final = clock();
+            tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
+            printf("\nTime Executation: %lf \n",tempo);
+
+            printf("\n");
             break;
 
         case 4:
@@ -83,7 +95,7 @@ int BTree()
             break;
 
 
-        case 11:
+        case 33:
             printf("Reading File . . . \n");
             t_inicial = clock();
             Btree_Read_File(b);
@@ -92,17 +104,21 @@ int BTree()
             printf("Time Executation: %lf \n",tempo);
             break;
 
+        case 44:
+            read_search_txt_B(b);
+            break;
+
         case 22:
             bTree_Print_Keys_TreeMode(b);
             break;
 
-        case 33:
+        /*case 33:
             b = bTree_Create();
-            break;
+            break;*/
 
-        case 44:
+        /*case 44:
             bTree_Destroy(b);
-            break;
+            break;*/
 
         case 0:
             break;
@@ -115,6 +131,8 @@ int BTree()
 
     }while(option != 0);
 
+
+    bTree_Destroy(b);
 
     return 0;
 }

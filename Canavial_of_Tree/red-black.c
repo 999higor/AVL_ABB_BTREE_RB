@@ -165,7 +165,7 @@ void insertRB(int val)
     if(searchRB(val)==1)
 
     {
-        printf("\nEntered element already exists in the tree\n");
+        //printf("\nEntered element already exists in the tree\n");
         return;
     }
 
@@ -289,12 +289,12 @@ int searchRB(int val)
         }
         else
         {
-            printf("Search Element Found!!\n");
+            //printf("Search Element Found!!\n");
             return 1;
         }
 
     }
-    printf("Given Data Not Found in RB Tree!!\n");
+    //printf("Given Data Not Found in RB Tree!!\n");
 
     return 0;
 
@@ -520,4 +520,21 @@ struct rbtNode* read_RB()
     }
     fclose(file);
     //return b;
+}
+
+void read_search_txt_RB()
+{
+    int number;
+
+    FILE* busca = fopen("search.txt", "r");
+
+    fscanf(busca, "%d", &number);
+
+    while(!feof(busca))
+    {
+        printf("  Return: %d \n",searchRB(number));
+        fscanf(busca, "%d", &number);
+
+    }
+    fclose(busca);
 }

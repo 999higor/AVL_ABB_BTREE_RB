@@ -269,11 +269,11 @@ void inOrder(struct Node *root)
 struct Node *search(struct Node *root ,int key)
 {
     if(root == NULL)
-        return root;
+        return 0;
     if(root->key == key)
     {
         printf("Value Found : %d <\n",root->key);
-        return root;
+        return 1;
     }
     if(root->key < key)
         return search(root->right, key);
@@ -341,3 +341,21 @@ int countElement(struct Node *root)
 
 
 }
+
+void read_search_txt_AVL(struct Node *root)
+{
+    int number;
+
+    FILE* busca = fopen("search.txt", "r");
+
+    fscanf(busca, "%d", &number);
+
+    while(!feof(busca))
+    {
+        printf("  Return: %d \n",search(root, number));
+        fscanf(busca, "%d", &number);
+
+    }
+    fclose(busca);
+}
+

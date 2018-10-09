@@ -49,5 +49,7 @@ int higherElement(struct Node *root);
 
 int countElement(struct Node *root);
 
+void read_search_txt_AVL(struct Node *root);
+
 
 #endif // AVL_H_INCLUDED

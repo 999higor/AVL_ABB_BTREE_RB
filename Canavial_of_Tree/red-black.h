@@ -38,6 +38,8 @@ struct rbtNode* delete(int var);
 
 struct rbtNode* read_RB();
 
+void read_search_txt_RB();
+
 
 
 #endif // RED-BLACK_H_INCLUDED

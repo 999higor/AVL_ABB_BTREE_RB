@@ -1,18 +1,18 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <time.h>>
+#include <time.h>
 
 #include "menu.h"
 #include "abb.h"
 
 int abb()
 {
-    int vrau=0, op ,numero;
+    int vrau=0, op ,numero ,teste;
     struct node *t = NULL; ///ABB
     FILE *arquivoGravado;
 
     clock_t t_inicial, t_final;
-    float tempo=0;
+    double tempo=0;
 
     do{
             printf(">>>>> ABB - Binary Search Tree <<<<<\n");
@@ -28,6 +28,7 @@ int abb()
             printf("11 - VERFIFY - The Higher Value\n");
             printf("22 - VERIFY - The Lower Value\n");
             printf("33 - READ - VALUES.TXT\n");
+            printf("44 - READ - SEARCH.TXT\n");
             printf("0 - EXIT\n");
             printf(">");
             scanf("%i",&op);
@@ -44,7 +45,15 @@ int abb()
                 case 2:
                 printf("\nValue: ");
                 scanf("%d",&numero);
+
+                t_inicial = clock();
+
                 t = deletaNo(t,numero);
+
+                t_final = clock();
+                tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
+                printf("Time Executation: %lf \n",tempo);
+
 
                 break;
 
@@ -54,7 +63,7 @@ int abb()
 
                 t_inicial = clock();
 
-                t = procura(t,numero);
+                printf("\nReturn: %d\n" ,procura(t,numero));
 
                 t_final = clock();
                 tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
@@ -106,15 +115,21 @@ int abb()
                 break;
 
                 case 33:
+
                 t_inicial = clock();
                 t = ler_arquivo(t);
                 t_final = clock();
+
                 tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
 
                 printf("\nFile Read\n");
                 printf("Time Executation: %lf \n",tempo);
 
                 break;
+
+                case 44:
+                    read_search_txt(t);
+                    break;
 
                 case 0:
                     break;
