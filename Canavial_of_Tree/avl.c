@@ -272,7 +272,7 @@ struct Node *search(struct Node *root ,int key)
         return 0;
     if(root->key == key)
     {
-        printf("Value Found : %d <\n",root->key);
+        //printf("Value Found : %d <\n",root->key);
         return 1;
     }
     if(root->key < key)
@@ -342,7 +342,7 @@ int countElement(struct Node *root)
 
 }
 
-void read_search_txt_AVL(struct Node *root)
+void read_search_txt_AVL(struct Node *root ,FILE * result_search_AVL)
 {
     int number;
 
@@ -352,7 +352,7 @@ void read_search_txt_AVL(struct Node *root)
 
     while(!feof(busca))
     {
-        printf("  Return: %d \n",search(root, number));
+        fprintf(result_search_AVL,"%d \n",search(root, number));
         fscanf(busca, "%d", &number);
 
     }

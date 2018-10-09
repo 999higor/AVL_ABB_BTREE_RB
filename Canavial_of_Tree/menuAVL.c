@@ -12,6 +12,7 @@ int avl()
     int numero;
     struct Node *root = NULL; ///AVL
     FILE *arquivoGravadoAVL;
+    FILE *result_search_AVL;
 
     clock_t t_inicial, t_final;
     double tempo=0;
@@ -55,7 +56,7 @@ int avl()
 
                 t_final = clock();
                 tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
-                printf("Time Executation: %lf \n",tempo);
+                printf("Time: %lf \n",tempo);
 
 
 
@@ -71,7 +72,7 @@ int avl()
 
                 t_final = clock();
                 tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
-                printf("Time Executation: %lf \n",tempo);
+                printf("Time: %lf \n",tempo);
                 break;
 
                 case 4:
@@ -130,12 +131,14 @@ int avl()
                 t_final = clock();
                 tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
                 printf("\nFile Read\n");
-                printf("Time Executation: %lf \n",tempo);
+                printf("Time: %lf \n",tempo);
 
                 break;
 
                 case 44:
-                    read_search_txt_AVL(root);
+                    result_search_AVL = fopen("result_search_AVL.txt" ,"w");
+                    read_search_txt_AVL(root ,result_search_AVL);
+                    fclose(result_search_AVL);
                     break;
 
                 case 0:

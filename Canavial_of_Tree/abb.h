@@ -35,6 +35,6 @@ int contaElementos(struct node *raiz);
 
 struct node *ler_arquivo(struct node* raiz);
 
-void read_search_txt(struct node* raiz);
+void read_search_txt(struct node* raiz ,FILE* result_search_ABB);
 
 #endif // ABB_H_INCLUDED

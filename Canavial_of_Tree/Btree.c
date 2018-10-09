@@ -316,7 +316,7 @@ bTree *Btree_Read_File(bTree b)
     //return b;
 }
 
-void read_search_txt_B(bTree raiz)
+void read_search_txt_B(bTree raiz ,FILE* result_search_Btree)
 {
     int number;
 
@@ -326,7 +326,7 @@ void read_search_txt_B(bTree raiz)
 
     while(!feof(busca))
     {
-        printf("  Return: %d \n",bTree_Search(raiz, number));
+        fprintf(result_search_Btree,"%d \n",bTree_Search(raiz, number));
         fscanf(busca, "%d", &number);
 
     }

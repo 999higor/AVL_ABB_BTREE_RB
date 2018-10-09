@@ -1,8 +1,9 @@
-#include "red-black.h"
-#include "menu.h"
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 
+#include "red-black.h"
+#include "menu.h"
 
 int red_black()
 
@@ -13,6 +14,8 @@ int red_black()
 
     clock_t t_inicial, t_final;
     double tempo=0;
+
+    FILE* result_search_RB;
 
     do
     {
@@ -47,7 +50,7 @@ int red_black()
 
                 t_final = clock();
                 tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
-                printf("Time Executation: %lf \n",tempo);
+                printf("Time : %lf \n",tempo);
 
 
                 break;
@@ -62,7 +65,7 @@ int red_black()
 
                 t_final = clock();
                 tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
-                printf("Time Executation: %lf \n",tempo);
+                printf("Time: %lf \n",tempo);
 
 
                 break;
@@ -81,11 +84,12 @@ int red_black()
 
                 t_final = clock();
                 tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
-                printf("Time Executation: %lf \n",tempo);
+                printf("Time: %lf \n",tempo);
                 break;
 
             case 6:
-                read_search_txt_RB();
+                result_search_RB = fopen("result_search_RB.txt" ,"w");
+                read_search_txt_RB(result_search_RB);
                 break;
 
             default:

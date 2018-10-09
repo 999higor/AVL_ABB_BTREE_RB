@@ -1,8 +1,7 @@
-#include "red-black.h"
 #include <stdio.h>
 #include <stdlib.h>
 
-
+#include "red-black.h"
 void aux_print()
 {
     inorderTree(root);
@@ -44,7 +43,8 @@ void left_Rotate(struct rbtNode *x)
 void right_Rotate(struct rbtNode *y)
 {
     struct rbtNode *x;
-    x = y->left; y->left = x->right;
+    x = y->left;
+    y->left = x->right;
 
     if ( x->right != NULL)
     {
@@ -58,7 +58,7 @@ void right_Rotate(struct rbtNode *y)
         root = x;
     }
 
-    else if((y->parent->left!=NULL)&& (y->key == y->parent->left->key))
+    else if((y->parent->left!=NULL) && (y->key == y->parent->left->key))
     {
         y->parent->left = x;
     }
@@ -248,25 +248,6 @@ void postorderTree(struct rbtNode* root)
     return;
 }
 
-void traversal(struct rbtNode* root)
-
-{
-    if (root != NULL)
-    {
-    printf("root is %d-- %c",root->key,root->color);
-
-    printf("\nInorder tree traversal\n");
-
-    inorderTree(root);
-
-    printf("\npostorder tree traversal\n");
-
-    postorderTree(root);
-
-    }
-    return;
-
-}
 
 int searchRB(int val)
 
@@ -502,7 +483,7 @@ struct rbtNode* delete(int var)
     return y;
 }
 
-struct rbtNode* read_RB()
+void read_RB()
 {
     int numero;
 
@@ -522,7 +503,7 @@ struct rbtNode* read_RB()
     //return b;
 }
 
-void read_search_txt_RB()
+void read_search_txt_RB(FILE* result_search_RB)
 {
     int number;
 
@@ -532,7 +513,7 @@ void read_search_txt_RB()
 
     while(!feof(busca))
     {
-        printf("  Return: %d \n",searchRB(number));
+        fprintf(result_search_RB,"%d \n",searchRB(number));
         fscanf(busca, "%d", &number);
 
     }

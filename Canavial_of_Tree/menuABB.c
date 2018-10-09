@@ -10,6 +10,7 @@ int abb()
     int vrau=0, op ,numero ,teste;
     struct node *t = NULL; ///ABB
     FILE *arquivoGravado;
+    FILE *result_search_ABB;
 
     clock_t t_inicial, t_final;
     double tempo=0;
@@ -52,7 +53,7 @@ int abb()
 
                 t_final = clock();
                 tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
-                printf("Time Executation: %lf \n",tempo);
+                printf("Time: %lf \n",tempo);
 
 
                 break;
@@ -67,7 +68,7 @@ int abb()
 
                 t_final = clock();
                 tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
-                printf("\nTime Executation: %lf \n",tempo);
+                printf("\nTime: %lf \n",tempo);
                 break;
 
                 case 4:
@@ -115,20 +116,24 @@ int abb()
                 break;
 
                 case 33:
-
                 t_inicial = clock();
+
+
+
                 t = ler_arquivo(t);
                 t_final = clock();
 
                 tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
 
                 printf("\nFile Read\n");
-                printf("Time Executation: %lf \n",tempo);
+                printf("Time: %lf \n",tempo);
 
                 break;
 
                 case 44:
-                    read_search_txt(t);
+                    result_search_ABB = fopen("result_search_ABB.txt" ,"w");
+                    read_search_txt(t ,result_search_ABB);
+                    fclose(result_search_ABB);
                     break;
 
                 case 0:

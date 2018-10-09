@@ -1,5 +1,5 @@
-#ifndef RED-BLACK_H_INCLUDED
-#define RED-BLACK_H_INCLUDED
+#ifndef RED_BLACK_H_INCLUDED
+#define RED_BLACK_H_INCLUDED
 
 struct rbtNode
 {
@@ -36,10 +36,10 @@ void color_delete(struct rbtNode *x);
 
 struct rbtNode* delete(int var);
 
-struct rbtNode* read_RB();
+void read_RB();
 
-void read_search_txt_RB();
+void read_search_txt_RB(FILE* result_search_RB);
 
 
 
-#endif // RED-BLACK_H_INCLUDED
+#endif // RED_BLACK_H_INCLUDED

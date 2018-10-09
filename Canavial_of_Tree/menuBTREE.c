@@ -10,9 +10,9 @@
 int BTree()
 {
     bTree b;
-    int i ,option ,valor;
+    int option ,valor;
 
-    FILE *arquivo;
+    FILE *result_search_Btree;
 
     clock_t t_inicial, t_final;
     double tempo=0;
@@ -60,7 +60,7 @@ int BTree()
 
             t_final = clock();
             tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
-            printf("\nTime Executation: %lf \n",tempo);
+            printf("\nTime: %lf \n",tempo);
 
             printf("\n");
             break;
@@ -101,11 +101,13 @@ int BTree()
             Btree_Read_File(b);
             t_final = clock();
             tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
-            printf("Time Executation: %lf \n",tempo);
+            printf("Time: %lf \n",tempo);
             break;
 
         case 44:
-            read_search_txt_B(b);
+            result_search_Btree = fopen("result_search_Btree.txt" ,"w");
+            read_search_txt_B(b, result_search_Btree);
+            fclose(result_search_Btree);
             break;
 
         case 22:

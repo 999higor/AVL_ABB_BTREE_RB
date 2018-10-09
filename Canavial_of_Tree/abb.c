@@ -20,7 +20,7 @@ struct node *procura(struct node *raiz ,int numero)
     }
     if(raiz->numero == numero)
     {
-        printf("> Value Found: %d <", raiz->numero);
+        //printf("> Value Found: %d <", raiz->numero);
         return 1;
     }
     if(raiz->numero < numero)
@@ -193,7 +193,7 @@ struct node *ler_arquivo(struct node* raiz)
     return raiz;
 }
 
-void read_search_txt(struct node* raiz)
+void read_search_txt(struct node* raiz, FILE* result_search_ABB)
 {
     int number;
 
@@ -203,7 +203,7 @@ void read_search_txt(struct node* raiz)
 
     while(!feof(busca))
     {
-        printf("  Return: %d \n",procura(raiz, number));
+        fprintf(result_search_ABB,"%d \n",procura(raiz, number));
         fscanf(busca, "%d", &number);
 
     }
