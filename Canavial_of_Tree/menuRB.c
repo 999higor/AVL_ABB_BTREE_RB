@@ -10,12 +10,13 @@ int red_black()
 {
     //struct rbtNode* root;
 
-    int choice,val=0,var=0;
+    int choice,val=0,var=0 ,altura;
 
     clock_t t_inicial, t_final;
     double tempo=0;
 
     FILE* result_search_RB;
+    FILE* result_delete_RB;
 
     do
     {
@@ -26,6 +27,7 @@ int red_black()
         printf("4 - PRINT - In Order\n");
         printf("5 - READ - VALUES.TXT\n");
         printf("6 - READ - SEARCH.TXT\n");
+        printf("7 - READ - REMOVE.TXT\n");
         printf("0 - EXIT\n");
 
         printf(">");
@@ -46,7 +48,7 @@ int red_black()
                 scanf("%d",&var);
                 t_inicial = clock();
 
-                delete(var);
+                delete_RB(var);
 
                 t_final = clock();
                 tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
@@ -90,7 +92,20 @@ int red_black()
             case 6:
                 result_search_RB = fopen("result_search_RB.txt" ,"w");
                 read_search_txt_RB(result_search_RB);
+                fclose(result_search_RB);
                 break;
+
+            case 7:
+                result_delete_RB = fopen("result_delete_RB.txt" ,"w");
+                read_delete_txt_RB(result_delete_RB);
+
+                altura = aux_height_RB();
+
+                fprintf(result_delete_RB,"%d",altura);
+
+                fclose(result_delete_RB);
+                break;
+
 
             default:
                 printf("\nERROOOOOOU\n");

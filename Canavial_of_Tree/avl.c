@@ -359,3 +359,21 @@ void read_search_txt_AVL(struct Node *root ,FILE * result_search_AVL)
     fclose(busca);
 }
 
+void read_delete_txt_AVL(struct Node *root, FILE* result_remove_AVL)
+{
+    int num ,height;
+
+    FILE* file = fopen ("remove.txt", "r");
+
+    fscanf (file, "%d", &num);
+
+    while (!feof(file)){
+
+        root = deleteNode(root, num);
+
+        fscanf(file, "%d", &num);
+
+    }
+    fclose(file);
+}
+

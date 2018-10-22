@@ -1,17 +1,17 @@
 # depslib dependency file v1.0
-1539115659 source:d:\higor\documents\github\canavial_of_tree\canavial_of_tree\abb.c
+1540163268 source:d:\higor\documents\github\canavial_of_tree\canavial_of_tree\abb.c
 	<stdio.h>
 	<stdlib.h>
 	"abb.h"
 
-1539115659 d:\higor\documents\github\canavial_of_tree\canavial_of_tree\abb.h
+1540162893 d:\higor\documents\github\canavial_of_tree\canavial_of_tree\abb.h
 
-1539117086 source:d:\higor\documents\github\canavial_of_tree\canavial_of_tree\avl.c
+1540168129 source:d:\higor\documents\github\canavial_of_tree\canavial_of_tree\avl.c
 	<stdio.h>
 	<stdlib.h>
 	"avl.h"
 
-1539117022 d:\higor\documents\github\canavial_of_tree\canavial_of_tree\avl.h
+1540165988 d:\higor\documents\github\canavial_of_tree\canavial_of_tree\avl.h
 
 1537906685 source:d:\higor\documents\github\canavial_of_tree\canavial_of_tree\menu_abb.c
 	<stdlib.h>
@@ -38,7 +38,7 @@
 	<stdio.h>
 	"avl.h"
 
-1539115659 source:d:\higor\documents\github\canavial_of_tree\canavial_of_tree\menuabb.c
+1540167004 source:d:\higor\documents\github\canavial_of_tree\canavial_of_tree\menuabb.c
 	<stdlib.h>
 	<stdio.h>
 	<time.h>
@@ -55,7 +55,7 @@
 	<stdio.h>
 	"avl.h"
 
-1539117121 source:d:\higor\documents\github\canavial_of_tree\canavial_of_tree\menuavl.c
+1540167004 source:d:\higor\documents\github\canavial_of_tree\canavial_of_tree\menuavl.c
 	<stdlib.h>
 	<stdio.h>
 	<time.h>
@@ -108,16 +108,16 @@
 
 1539125507 c:\users\administrador\documents\github\canavial_of_tree\canavial_of_tree\btree.h
 
-1539117225 source:d:\higor\documents\github\canavial_of_tree\canavial_of_tree\btree.c
+1539136630 source:d:\higor\documents\github\canavial_of_tree\canavial_of_tree\btree.c
 	<stdio.h>
 	<stdlib.h>
 	<assert.h>
 	<string.h>
 	"BTree.h"
 
-1539117225 d:\higor\documents\github\canavial_of_tree\canavial_of_tree\btree.h
+1539136630 d:\higor\documents\github\canavial_of_tree\canavial_of_tree\btree.h
 
-1539117225 source:d:\higor\documents\github\canavial_of_tree\canavial_of_tree\menubtree.c
+1540166722 source:d:\higor\documents\github\canavial_of_tree\canavial_of_tree\menubtree.c
 	<stdio.h>
 	<stdlib.h>
 	<assert.h>
@@ -126,18 +126,19 @@
 	"menu.h"
 	"BTree.h"
 
-1539117225 source:d:\higor\documents\github\canavial_of_tree\canavial_of_tree\red-black.c
-	"red-black.h"
+1539136630 source:d:\higor\documents\github\canavial_of_tree\canavial_of_tree\red-black.c
 	<stdio.h>
 	<stdlib.h>
-
-1539117225 d:\higor\documents\github\canavial_of_tree\canavial_of_tree\red-black.h
-
-1539117225 source:d:\higor\documents\github\canavial_of_tree\canavial_of_tree\menurb.c
 	"red-black.h"
-	"menu.h"
+
+1540168460 d:\higor\documents\github\canavial_of_tree\canavial_of_tree\red-black.h
+
+1540168445 source:d:\higor\documents\github\canavial_of_tree\canavial_of_tree\menurb.c
 	<stdio.h>
 	<time.h>
+	<stdlib.h>
+	"red-black.h"
+	"menu.h"
 
 1539125553 source:c:\users\administrador\documents\github\canavial_of_tree\canavial_of_tree\menubtree.c
 	<stdio.h>

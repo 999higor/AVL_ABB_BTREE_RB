@@ -7,10 +7,11 @@
 
 int abb()
 {
-    int vrau=0, op ,numero ,teste;
+    int vrau=0, op ,numero ,altura;
     struct node *t = NULL; ///ABB
     FILE *arquivoGravado;
     FILE *result_search_ABB;
+    FILE *result_delete_ABB;
 
     clock_t t_inicial, t_final;
     double tempo=0;
@@ -30,6 +31,7 @@ int abb()
             printf("22 - VERIFY - The Lower Value\n");
             printf("33 - READ - VALUES.TXT\n");
             printf("44 - READ - SEARCH.TXT\n");
+            printf("55 - READ - DELETE.TXT\n");
             printf("0 - EXIT\n");
             printf(">");
             scanf("%i",&op);
@@ -134,6 +136,17 @@ int abb()
                     result_search_ABB = fopen("result_search_ABB.txt" ,"w");
                     read_search_txt(t ,result_search_ABB);
                     fclose(result_search_ABB);
+                    break;
+
+                case 55:
+                    result_delete_ABB = fopen("result_delete_ABB.txt" ,"w");
+                    read_delete_txt(t, result_delete_ABB);
+
+                    altura = alturaArvore(t);
+
+                    fprintf(result_delete_ABB,"%d",altura);
+
+                    fclose(result_delete_ABB);
                     break;
 
                 case 0:

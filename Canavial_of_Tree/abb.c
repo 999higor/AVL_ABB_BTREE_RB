@@ -209,3 +209,21 @@ void read_search_txt(struct node* raiz, FILE* result_search_ABB)
     }
     fclose(busca);
 }
+
+void read_delete_txt(struct node* raiz, FILE* result_remove_ABB)
+{
+    int num ,height;
+
+    FILE* file = fopen ("remove.txt", "r");
+
+    fscanf (file, "%d", &num);
+
+    while (!feof(file)){
+
+        raiz = deleteNode(raiz, num);
+
+        fscanf(file, "%d", &num);
+
+    }
+    fclose(file);
+}

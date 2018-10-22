@@ -10,9 +10,11 @@ int avl()
     int vrau=0;
     int op;
     int numero;
+    int altura;
     struct Node *root = NULL; ///AVL
     FILE *arquivoGravadoAVL;
     FILE *result_search_AVL;
+    FILE *result_delete_AVL;
 
     clock_t t_inicial, t_final;
     double tempo=0;
@@ -32,6 +34,7 @@ int avl()
             printf("22 - VERIFY - The Lower Value\n");
             printf("33 - READ - VALUES.TXT\n");
             printf("44 - READ - SEARCH.TXT\n");
+            printf("55 - READ - REMOVE.TXT\n");
             printf("0 - EXIT\n");
             printf(">");
             scanf("%i",&op);
@@ -139,6 +142,17 @@ int avl()
                     result_search_AVL = fopen("result_search_AVL.txt" ,"w");
                     read_search_txt_AVL(root ,result_search_AVL);
                     fclose(result_search_AVL);
+                    break;
+
+                case 55:
+                    result_delete_AVL = fopen("result_delete_AVL.txt" ,"w");
+                    read_delete_txt_AVL(root, result_delete_AVL);
+
+                    altura = heightTree(root);
+
+                    fprintf(result_delete_AVL,"%d",altura);
+
+                    fclose(result_delete_AVL);
                     break;
 
                 case 0:

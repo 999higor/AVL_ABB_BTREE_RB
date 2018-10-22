@@ -7,6 +7,11 @@ void aux_print()
     inorderTree(root);
 }
 
+int aux_height_RB()
+{
+    heightTree_RB(root);
+}
+
 void left_Rotate(struct rbtNode *x)
 {
     struct rbtNode *y;
@@ -407,7 +412,7 @@ void color_delete(struct rbtNode *x)
     x->color = 'b';
 }
 
-struct rbtNode* delete(int var)
+struct rbtNode* delete_RB(int var)
 {
     struct rbtNode *x = NULL, *y = NULL, *z;
     z=root;
@@ -518,4 +523,34 @@ void read_search_txt_RB(FILE* result_search_RB)
 
     }
     fclose(busca);
+}
+void read_delete_txt_RB(FILE* result_remove_RB)
+{
+    int num ,height;
+
+    FILE* file = fopen ("remove.txt", "r");
+
+    fscanf (file, "%d", &num);
+
+    while (!feof(file)){
+
+        delete_RB(num);
+
+        fscanf(file, "%d", &num);
+
+    }
+    fclose(file);
+}
+
+int heightTree_RB(struct rbtNode *root)
+{
+   if (root == NULL)
+      return -1;
+   else {
+      int heightLeft = heightTree_RB(root->left);
+      int heightRight = heightTree_RB(root->right);
+      if (heightLeft < heightRight)
+        return heightRight + 1;
+      else return heightLeft + 1;
+   }
 }
