@@ -159,10 +159,12 @@ int avl()
                     break;
 
                 default:
-                    printf("\nWrong way little grasshopper\n");
+                    printf("\nsera q estou em alagoinha? \n");
             }
 
     }while(op!=0);
+
+    free_avl(root);
 
     return 0;
 }

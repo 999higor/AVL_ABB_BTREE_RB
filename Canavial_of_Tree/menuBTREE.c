@@ -126,7 +126,7 @@ int BTree()
             break;
 
         default:
-            printf("Are you lost ? \n");
+            printf("ih rapaiz ? \n");
 
         }
 

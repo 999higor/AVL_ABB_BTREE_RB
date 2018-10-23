@@ -114,6 +114,9 @@ int red_black()
 
     }while(choice!=0);
 
+    ///nao esta funcionando por motivos desconhecidos
+    //aux_free_RB();
+
     return 0;
 }
 

@@ -153,10 +153,12 @@ int abb()
                     break;
 
                 default:
-                    printf("\nInvalid Choice my friend\n");
+                    printf("\nOnde e que eu to? \n");
             }
 
     }while(op!=0);
+
+    free_abb(t);
 
     return 0;
 }

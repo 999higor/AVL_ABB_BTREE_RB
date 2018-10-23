@@ -39,4 +39,6 @@ void read_search_txt(struct node* raiz ,FILE* result_search_ABB);
 
 void read_delete_txt(struct node* raiz, FILE* result_remove_ABB);
 
+void free_abb(struct node *raiz);
+
 #endif // ABB_H_INCLUDED

@@ -53,4 +53,6 @@ void read_search_txt_AVL(struct Node *root ,FILE *result_search_AVL);
 
 void read_delete_txt_AVL(struct Node *root, FILE* result_remove_AVL);
 
+void free_avl(struct Node *root);
+
 #endif // AVL_H_INCLUDED

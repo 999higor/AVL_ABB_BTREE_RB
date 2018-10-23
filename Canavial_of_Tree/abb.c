@@ -227,3 +227,16 @@ void read_delete_txt(struct node* raiz, FILE* result_remove_ABB)
     }
     fclose(file);
 }
+
+void free_abb(struct node *raiz)
+{
+    if(raiz == NULL)
+        return 0;
+
+    if(raiz != NULL)
+    {
+        free_abb(raiz->esquerda);
+        free_abb(raiz->direita);
+        free(raiz);
+    }
+}

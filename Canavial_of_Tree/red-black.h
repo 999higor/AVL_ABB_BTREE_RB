@@ -14,6 +14,8 @@ void aux_print();
 
 int aux_height_RB();
 
+aux_free_RB();
+
 void left_Rotate(struct rbtNode *x);
 
 void right_Rotate(struct rbtNode *y);
@@ -45,6 +47,8 @@ void read_search_txt_RB(FILE* result_search_RB);
 void read_delete_txt_RB(FILE* result_remove_RB);
 
 int heightTree_RB(struct rbtNode *root);
+
+void free_RB(struct rbtNode* root);
 
 
 #endif // RED_BLACK_H_INCLUDED

@@ -377,3 +377,13 @@ void read_delete_txt_AVL(struct Node *root, FILE* result_remove_AVL)
     fclose(file);
 }
 
+void free_avl(struct Node *root)
+{
+    if(root != NULL)
+    {
+        free_avl(root->left);
+        free_avl(root->right);
+        free(root);
+    }
+}
+

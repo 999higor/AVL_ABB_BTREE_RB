@@ -12,6 +12,12 @@ int aux_height_RB()
     heightTree_RB(root);
 }
 
+aux_free_RB()
+{
+    printf("aki");
+    free_RB(root);
+}
+
 void left_Rotate(struct rbtNode *x)
 {
     struct rbtNode *y;
@@ -553,4 +559,14 @@ int heightTree_RB(struct rbtNode *root)
         return heightRight + 1;
       else return heightLeft + 1;
    }
+}
+
+void free_RB(struct rbtNode *root)
+{
+    if(root != NULL)
+    {
+        free_RB(root->left);
+        free_RB(root->right);
+        free(root);
+    }
 }
