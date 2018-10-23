@@ -90,12 +90,23 @@ int red_black()
                 break;
 
             case 6:
+                t_inicial = clock();
+
                 result_search_RB = fopen("result_search_RB.txt" ,"w");
                 read_search_txt_RB(result_search_RB);
                 fclose(result_search_RB);
+
+                t_final = clock();
+
+                tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
+
+                // printf("\nFile Read\n");
+                printf("Time: %lf \n",tempo);
                 break;
 
             case 7:
+                t_inicial = clock();
+
                 result_delete_RB = fopen("result_delete_RB.txt" ,"w");
                 read_delete_txt_RB(result_delete_RB);
 
@@ -104,6 +115,13 @@ int red_black()
                 fprintf(result_delete_RB,"%d",altura);
 
                 fclose(result_delete_RB);
+
+                t_final = clock();
+
+                tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
+
+                // printf("\nFile Read\n");
+                printf("Time: %lf \n",tempo);
                 break;
 
 

@@ -97,7 +97,9 @@ int BTree()
 
         case 33:
             printf("Reading File . . . \n");
+
             t_inicial = clock();
+
             Btree_Read_File(b);
             t_final = clock();
             tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
@@ -105,9 +107,18 @@ int BTree()
             break;
 
         case 44:
+            t_inicial = clock();
+
             result_search_Btree = fopen("result_search_Btree.txt" ,"w");
             read_search_txt_B(b, result_search_Btree);
             fclose(result_search_Btree);
+
+            t_final = clock();
+
+            tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
+
+            // printf("\nFile Read\n");
+            printf("Time: %lf \n",tempo);
             break;
 
         case 22:

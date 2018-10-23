@@ -120,9 +120,8 @@ int abb()
                 case 33:
                 t_inicial = clock();
 
-
-
                 t = ler_arquivo(t);
+
                 t_final = clock();
 
                 tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
@@ -133,12 +132,23 @@ int abb()
                 break;
 
                 case 44:
+                    t_inicial = clock();
+
                     result_search_ABB = fopen("result_search_ABB.txt" ,"w");
                     read_search_txt(t ,result_search_ABB);
                     fclose(result_search_ABB);
+
+                    t_final = clock();
+
+                    tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
+
+                    //printf("\nFile Read\n");
+                    printf("Time: %lf \n",tempo);
                     break;
 
                 case 55:
+                    t_inicial = clock();
+
                     result_delete_ABB = fopen("result_delete_ABB.txt" ,"w");
                     read_delete_txt(t, result_delete_ABB);
 
@@ -147,6 +157,13 @@ int abb()
                     fprintf(result_delete_ABB,"%d",altura);
 
                     fclose(result_delete_ABB);
+
+                    t_final = clock();
+
+                    tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
+
+                   // printf("\nFile Read\n");
+                    printf("Time: %lf \n",tempo);
                     break;
 
                 case 0:

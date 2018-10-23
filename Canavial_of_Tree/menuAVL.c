@@ -139,12 +139,23 @@ int avl()
                 break;
 
                 case 44:
+                    t_inicial = clock();
+
                     result_search_AVL = fopen("result_search_AVL.txt" ,"w");
                     read_search_txt_AVL(root ,result_search_AVL);
                     fclose(result_search_AVL);
+
+                    t_final = clock();
+
+                    tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
+
+                   // printf("\nFile Read\n");
+                    printf("Time: %lf \n",tempo);
                     break;
 
                 case 55:
+                    t_inicial = clock();
+
                     result_delete_AVL = fopen("result_delete_AVL.txt" ,"w");
                     read_delete_txt_AVL(root, result_delete_AVL);
 
@@ -153,6 +164,13 @@ int avl()
                     fprintf(result_delete_AVL,"%d",altura);
 
                     fclose(result_delete_AVL);
+
+                    t_final = clock();
+
+                    tempo = ((double) (t_final - t_inicial)) /CLOCKS_PER_SEC;
+
+                   // printf("\nFile Read\n");
+                    printf("Time: %lf \n",tempo);
                     break;
 
                 case 0:
