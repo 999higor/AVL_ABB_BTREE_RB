@@ -303,13 +303,15 @@ bTree *Btree_Read_File(bTree b)
 
     FILE* file = fopen ("values.txt", "r");
 
-    fscanf (file, "%d", &numero);
+    //fscanf (file, "%d", &numero);
 
     while (!feof(file)){
 
+        fscanf(file, "%d", &numero);
+
         bTree_Insert(b, numero);
 
-        fscanf(file, "%d", &numero);
+        //fscanf(file, "%d", &numero);
 
     }
     fclose(file);
@@ -322,12 +324,14 @@ void read_search_txt_B(bTree raiz ,FILE* result_search_Btree)
 
     FILE* busca = fopen("search.txt", "r");
 
-    fscanf(busca, "%d", &number);
+    //fscanf(busca, "%d", &number);
 
     while(!feof(busca))
     {
-        fprintf(result_search_Btree,"%d \n",bTree_Search(raiz, number));
         fscanf(busca, "%d", &number);
+
+        fprintf(result_search_Btree,"%d \n",bTree_Search(raiz, number));
+        //fscanf(busca, "%d", &number);
 
     }
     fclose(busca);

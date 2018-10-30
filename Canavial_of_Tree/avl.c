@@ -348,12 +348,14 @@ void read_search_txt_AVL(struct Node *root ,FILE * result_search_AVL)
 
     FILE* busca = fopen("search.txt", "r");
 
-    fscanf(busca, "%d", &number);
+   // fscanf(busca, "%d", &number);
 
     while(!feof(busca))
     {
-        fprintf(result_search_AVL,"%d \n",search(root, number));
         fscanf(busca, "%d", &number);
+
+        fprintf(result_search_AVL,"%d \n",search(root, number));
+        //fscanf(busca, "%d", &number);
 
     }
     fclose(busca);
@@ -365,13 +367,14 @@ void read_delete_txt_AVL(struct Node *root, FILE* result_remove_AVL)
 
     FILE* file = fopen ("remove.txt", "r");
 
-    fscanf (file, "%d", &num);
+    //fscanf (file, "%d", &num);
 
     while (!feof(file)){
 
+        fscanf(file, "%d", &num);
         root = deleteNode(root, num);
 
-        fscanf(file, "%d", &num);
+       // fscanf(file, "%d", &num);
 
     }
     fclose(file);

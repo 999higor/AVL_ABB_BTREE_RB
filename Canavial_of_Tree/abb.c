@@ -180,13 +180,15 @@ struct node *ler_arquivo(struct node* raiz)
 
     FILE* file = fopen ("values.txt", "r");
 
-    fscanf (file, "%d", &numero);
+    //fscanf (file, "%d", &numero);
 
     while (!feof(file)){
 
+        fscanf(file, "%d", &numero);
+
         raiz = insere(raiz, numero);
 
-        fscanf(file, "%d", &numero);
+        //fscanf(file, "%d", &numero);
 
     }
     fclose(file);
@@ -199,12 +201,13 @@ void read_search_txt(struct node* raiz, FILE* result_search_ABB)
 
     FILE* busca = fopen("search.txt", "r");
 
-    fscanf(busca, "%d", &number);
+    //fscanf(busca, "%d", &number);
 
     while(!feof(busca))
     {
-        fprintf(result_search_ABB,"%d \n",procura(raiz, number));
         fscanf(busca, "%d", &number);
+        fprintf(result_search_ABB,"%d \n",procura(raiz, number));
+        //fscanf(busca, "%d", &number);
 
     }
     fclose(busca);
@@ -216,13 +219,15 @@ void read_delete_txt(struct node* raiz, FILE* result_remove_ABB)
 
     FILE* file = fopen ("remove.txt", "r");
 
-    fscanf (file, "%d", &num);
+    //fscanf (file, "%d", &num);
 
     while (!feof(file)){
 
+        fscanf(file, "%d", &num);
+
         raiz = deleteNode(raiz, num);
 
-        fscanf(file, "%d", &num);
+        //fscanf(file, "%d", &num);
 
     }
     fclose(file);

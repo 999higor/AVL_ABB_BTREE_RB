@@ -500,14 +500,14 @@ void read_RB()
 
     FILE* file = fopen ("values.txt", "r");
 
-    fscanf (file, "%d", &numero);
+    //fscanf (file, "%d", &numero);
 
     while (!feof(file))
     {
-
+        fscanf(file, "%d", &numero);
         insertRB(numero);
 
-        fscanf(file, "%d", &numero);
+        //fscanf(file, "%d", &numero);
 
     }
     fclose(file);
@@ -520,12 +520,14 @@ void read_search_txt_RB(FILE* result_search_RB)
 
     FILE* busca = fopen("search.txt", "r");
 
-    fscanf(busca, "%d", &number);
+    //fscanf(busca, "%d", &number);
 
     while(!feof(busca))
     {
-        fprintf(result_search_RB,"%d \n",searchRB(number));
         fscanf(busca, "%d", &number);
+
+        fprintf(result_search_RB,"%d \n",searchRB(number));
+        //fscanf(busca, "%d", &number);
 
     }
     fclose(busca);
@@ -536,13 +538,15 @@ void read_delete_txt_RB(FILE* result_remove_RB)
 
     FILE* file = fopen ("remove.txt", "r");
 
-    fscanf (file, "%d", &num);
+    //fscanf (file, "%d", &num);
 
     while (!feof(file)){
 
+        fscanf (file, "%d", &num);
+
         delete_RB(num);
 
-        fscanf(file, "%d", &num);
+        //fscanf(file, "%d", &num);
 
     }
     fclose(file);
